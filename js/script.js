@@ -18,9 +18,9 @@ function sortear(){
 
    if (min >= max){
       alert('Intervalo inválido')
-
       return 0
    }
+
 
    if (nSorteados <= 0){
       nSorteadosHTML = '1'
@@ -32,11 +32,6 @@ function sortear(){
       nSorteados = max - min
    }
 
-   if (max < min){
-      alert('O valor máximo deve ser maior que o minimo')
-
-      return 0
-   }
 
    while (resultados.length < nSorteados){
       let numSorteado = Math.floor(Math.random() * (max - min + 1)) + min
