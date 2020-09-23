@@ -1,6 +1,5 @@
 
 function sortear(){
-   
    let nSorteadosHTML = document.getElementById('n')
    let nSorteados = nSorteadosHTML.value
    
