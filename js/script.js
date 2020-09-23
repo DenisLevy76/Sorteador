@@ -5,6 +5,7 @@ function sortear(){
    let nSorteados = document.getElementById('n').value
    let minHTML = document.querySelector('#min')
    let min = Number(document.querySelector('#min').value)
+   let maxHTML = document.querySelector('#max')
    let max = Number(document.querySelector('#max').value)
    const organizar = document.querySelector('#organizar').checked
    const resultado = document.querySelector('#valor')
@@ -16,8 +17,9 @@ function sortear(){
    }
 
    if (min >= max){
-      minHTML.value = '1'
-      min = 1
+      alert('Intervalo inválido')
+
+      return 0
    }
 
    if (nSorteados > (max - min)){
@@ -29,6 +31,11 @@ function sortear(){
       nSorteadosHTML.value = `${max - 1}`
       nSorteados = max
 
+   }
+
+   if (max < min){
+      alert('O valor máximo deve ser maior que o minimo')
+      return 0
    }
 
    while (resultados.length < nSorteados){
