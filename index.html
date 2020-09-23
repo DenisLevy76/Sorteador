@@ -13,12 +13,14 @@
    <section class="principal">
       <div>
          <p>Número de sorteios:</p>
-         <input type="number" name="inputNum" id="n" value="10" onclick="this.select()"><br>
-         <p>Escolha um intervalo para sortear:</p>
+         <input type="number" name="inputNum" id="n" value="1" onclick="this.select()"><br>
+         <p>Digite um intervalo para o sorteio:</p>
          <input type="number" name="inputNum" id="min" value="1" onclick="this.select()"> -
-         <input type="number" name="inputNum" id="max" value="100" onclick="this.select()"><br>
+         <input type="number" name="inputNum" id="max" value="10" onclick="this.select()"><br>
          <div class="checkList">
-            <label for="organizar"><input type="checkbox" name="organizar" id="organizar">Ordernar valores</label>
+            <label for="organizar"><input type="checkbox" name="organizar" id="organizar">Ordernar valores.</label><br>
+            <!-- <label for="repetir"><input type="checkbox" name="repetir" id="repetir">Repetir valores</label> -->
+
          </div>
          <input type="button" value="sortear" onclick="sortear()">
       </div>
