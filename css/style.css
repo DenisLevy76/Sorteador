@@ -76,12 +76,15 @@ input[type=number]:focus{
    border-bottom: 3px solid rgb(137, 198, 255);
 }
 
-#valor{
+.resultado{
    opacity: 0;
    background-color: rgb(137, 198, 255);
    padding: 10px;
    border-radius: 10px;
+   text-align: center;
+
 }
+
 
 @media screen and (max-width: 800px){
    .principal{

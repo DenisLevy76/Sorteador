@@ -2,13 +2,13 @@
 function sortear(){
    
    let nSorteadosHTML = document.getElementById('n')
-   let nSorteados = document.getElementById('n').value
-   let minHTML = document.querySelector('#min')
-   let min = Number(document.querySelector('#min').value)
-   let maxHTML = document.querySelector('#max')
-   let max = Number(document.querySelector('#max').value)
+   let nSorteados = nSorteadosHTML.value
+   
+   const min = Number(document.querySelector('#min').value)
+   const max = Number(document.querySelector('#max').value)
    const organizar = document.querySelector('#organizar').checked
-   const resultado = document.querySelector('#valor')
+   const divResultado = document.querySelector('.resultado')
+
    const resultados = []
 
    if (nSorteados <= 0){
@@ -46,13 +46,28 @@ function sortear(){
    }
 
    if (resultados.length == 1){
-      resultado.style.opacity = '100%'
-      resultado.innerHTML = `O número escolhido foi:<br>${resultados}`
+      divResultado.style.opacity = '100%'
+      divResultado.innerHTML = `O número escolhido foi:${resultados}`
    }
 
    else{
-      resultado.style.opacity = '100%'
-      resultado.innerHTML = `Os números escolhidos foram:<br>${resultados}`
+      divResultado.style.opacity = '100%'
+      divResultado.innerHTML = `Os números escolhidos foram:<br>`
+
+      for (index in resultados){
+
+         if((Number(index) + 1) < resultados.length){
+            divResultado.innerHTML += `${resultados[index]}, `
+            console.log(1, index, resultados.length);
+         }
+
+         else{
+            divResultado.innerHTML += `${resultados[index]}`
+            console.log(2, index, resultados.length);
+         }
+      
+      }
+
    }
 
 }
