@@ -13,6 +13,7 @@ function sortear(){
    }
 
    if (nSorteados > max){
+      alert(`Não é possivel sortear uma quantidade de números maior que o intervalo escolhido. O número de sorteios foi ajustado para o valor máximo do intervalo.`)
       nSorteados = max
    }
 
