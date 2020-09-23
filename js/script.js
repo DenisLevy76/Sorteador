@@ -2,7 +2,8 @@
 function sortear(){
    
    let nSorteados = document.getElementById('n').value
-   const min = Number(document.querySelector('#min').value)
+   let minHTML = document.querySelector('#min')
+   let min = Number(document.querySelector('#min').value)
    const max = Number(document.querySelector('#max').value)
    const organizar = document.querySelector('#organizar').checked
    const resultado = document.querySelector('#valor')
@@ -11,6 +12,13 @@ function sortear(){
    if (nSorteados <= 0){
       nSorteados = 1
    }
+
+   if (min >= max){
+      minHTML.value = '1'
+      min = 1
+   }
+
+   console.log(min);
 
    if (nSorteados > max){
       alert(`Não é possivel sortear uma quantidade de números maior que o intervalo escolhido. O número de sorteios foi ajustado para o valor máximo do intervalo.`)
