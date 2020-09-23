@@ -83,3 +83,8 @@ input[type=number]:focus{
    border-radius: 10px;
 }
 
+@media screen and (max-width: 800px){
+   .principal{
+      width: 85%;
+   }
+}
