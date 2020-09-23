@@ -1,14 +1,14 @@
 
 function sortear(){
-   let nSorteadosHTML = document.getElementById('n')
-   let nSorteados = nSorteadosHTML.value
-   
+   const nSorteadosHTML = document.getElementById('n')
    const min = Number(document.querySelector('#min').value)
    const max = Number(document.querySelector('#max').value)
    const organizar = document.querySelector('#organizar').checked
    const divResultado = document.querySelector('.resultado')
+   var resultados = []
+   
+   let nSorteados = nSorteadosHTML.value
 
-   const resultados = []
 
    if (nSorteados <= 0){
       nSorteadosHTML.value = '1'
@@ -20,17 +20,15 @@ function sortear(){
       return 0
    }
 
-
    if (nSorteados <= 0){
-      nSorteadosHTML = '1'
+      nSorteadosHTML.value = '1'
       nSorteados = 1
    }
 
    if (nSorteados > (max - min)){
-      nSorteadosHTML.value = `${max - min}`
-      nSorteados = max - min
+      alert('Número de sorteios inválido')
+      return 0
    }
-
 
    while (resultados.length < nSorteados){
       let numSorteado = Math.floor(Math.random() * (max - min + 1)) + min
@@ -46,29 +44,23 @@ function sortear(){
 
    if (resultados.length == 1){
       divResultado.style.opacity = '100%'
-      divResultado.innerHTML = `O número escolhido foi:${resultados}`
+      divResultado.innerHTML = `O número sorteado foi:${resultados}`
    }
 
    else{
       divResultado.style.opacity = '100%'
-      divResultado.innerHTML = `Os números escolhidos foram:<br>`
+      divResultado.innerHTML = `Os números sorteados foram:<br>`
 
       for (index in resultados){
-
          if((Number(index) + 1) < resultados.length){
             divResultado.innerHTML += `${resultados[index]}, `
-            console.log(1, index, resultados.length);
          }
 
          else{
-            divResultado.innerHTML += `${resultados[index]}`
-            console.log(2, index, resultados.length);
+            divResultado.innerHTML += `${resultados[index]}.`
          }
-      
       }
-
    }
-
 }
 
 function sorter(a, b) {
