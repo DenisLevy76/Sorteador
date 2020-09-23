@@ -20,11 +20,6 @@ function sortear(){
       min = 1
    }
 
-   // if (nSorteados >= min){
-   //    nSorteadosHTML.value = `${min}`
-   //    nSorteados = min
-   // }
-
    if (nSorteados > (max - min)){
       nSorteadosHTML.value = `${max - min}`
       nSorteados = max - min
@@ -32,7 +27,6 @@ function sortear(){
 
    if (nSorteados > max){
       nSorteadosHTML.value = `${max - 1}`
-      alert(`Não é possivel sortear uma quantidade de números maior que o intervalo escolhido`)
       nSorteados = max
 
    }
