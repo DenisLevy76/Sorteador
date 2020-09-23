@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sorteador</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header>
+      <h1>Sorteador</h1>
+   </header>
+   <section class="principal">
+      <div>
+         <p>Número de sorteios:</p>
+         <input type="number" name="inputNum" id="n" value="10"><br>
+         <p>Escolha um intervalo para sortear:</p>
+         <input type="number" name="inputNum" id="min" value="1"> -
+         <input type="number" name="inputNum" id="max" value="100"><br>
+         <div class="checkList">
+            <label for="organizar"><input type="checkbox" name="organizar" id="organizar">Ordernar valores</label>
+         </div>
+         <input type="button" value="sortear" onclick="sortear()">
+      </div>
+      <div class="resultado">
+         <p id="valor"></p>
+      </div>
+   </section>
+   <footer>
+
+   </footer>
+   <script src="js/script.js"></script>
+</body>
+</html>
