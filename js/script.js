@@ -44,7 +44,7 @@ function sortear(){
 
    if (resultados.length == 1){
       divResultado.style.opacity = '100%'
-      divResultado.innerHTML = `O número sorteado foi:${resultados}`
+      divResultado.innerHTML = `O número sorteado foi:<br>${resultados}`
    }
 
    else{
