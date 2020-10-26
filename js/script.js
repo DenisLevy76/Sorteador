@@ -42,25 +42,26 @@ function sortear(){
       resultados.sort(sorter)
    }
 
+   
    if (resultados.length == 1){
-      divResultado.style.opacity = '100%'
       divResultado.innerHTML = `O número sorteado foi:<br>${resultados}`
    }
-
+   
    else{
-      divResultado.style.opacity = '100%'
       divResultado.innerHTML = `Os números sorteados foram:<br>`
-
+      
       for (index in resultados){
          if((Number(index) + 1) < resultados.length){
             divResultado.innerHTML += `${resultados[index]}, `
          }
-
+         
          else{
             divResultado.innerHTML += `${resultados[index]}.`
          }
       }
    }
+   
+   divResultado.style.opacity = '100%'
 }
 
 function sorter(a, b) {
